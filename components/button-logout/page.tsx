@@ -1,10 +1,7 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation'
 
-const Button_Logout = () => {
-    const router = useRouter()
-    
+const Button_Logout = () => { 
     const handleLogout = () => {
         window.localStorage.removeItem('token') // Hapus token dari localStorage
         window.location.href = '/' // Redirect ke halaman login

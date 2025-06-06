@@ -28,6 +28,7 @@ export async function POST(req: Request) {
       redirectUrl: redirectLink
     });
   } catch (err) {
+    console.error('Error sending OTP:', err);
     return NextResponse.json({
       status: 'gagal',
       message: 'Gagal mengirim OTP.',

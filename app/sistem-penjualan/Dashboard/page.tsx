@@ -28,7 +28,7 @@ const Dashboard = () => {
   useEffect(() => {    
     const total = monthlyData.reduce((acc, item) => acc + item.total, 0);
     setTotalPemasukkan(total);
-  }, []);
+  });
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
