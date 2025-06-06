@@ -69,7 +69,7 @@ export const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-md">
-        <h2 className="text-3xl font-bold mb-6 text-center">Welcome Back!</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">Welcome In Page Login!</h2>
         <form onSubmit={handleSubmit}>
           <InputField type="text" placeholder="Username" value={username} onChange={(e: any) => setUsername(e.target.value)} />
           <InputField type="password" placeholder="Password" value={password} onChange={(e: any) => setPassword(e.target.value)} />
