@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, ChangeEvent, FormEvent, useMemo } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
+import { Suspense } from 'react'
 
 interface InputFieldProps {
   type: string
@@ -37,6 +38,14 @@ const InputField = ({
 interface VerifyOTPResponse {
   status: string
   message?: string
+}
+
+export default function Wrapping(){
+  return(
+    <Suspense fallback={<div>Loading...</div>}>
+      <Authentication />
+    </Suspense>
+  )
 }
 
 const Authentication = () => {
@@ -127,4 +136,4 @@ const Authentication = () => {
   )
 }
 
-export default Authentication
+// export default Authentication

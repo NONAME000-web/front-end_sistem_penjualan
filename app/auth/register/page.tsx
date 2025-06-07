@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 'use client'
 import { useState, FormEvent, ChangeEvent } from 'react'
 import { useRouter } from 'next/navigation'
@@ -111,14 +110,8 @@ export default function Register() {
             aria-label="Password"
           />
           
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`w-full bg-pink-500 text-white py-3 rounded-lg transition ${
-              isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-pink-600'
-            }`}
-            aria-busy={isSubmitting}
-          >
+          <button type="submit" disabled={isSubmitting} className={`w-full bg-pink-500 text-white py-3 rounded-lg transition 
+          ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-pink-600'}`} aria-busy={isSubmitting}>
             {isSubmitting ? 'Processing...' : 'Create Account'}
           </button>
         </form>
@@ -126,21 +119,13 @@ export default function Register() {
         <div className="mt-4 text-center">
           <p className="text-sm">
             Already have an account?{' '}
-            <Link 
-              href="/" 
-              className="text-pink-500 font-semibold hover:underline"
-              aria-label="Login"
-            >
+            <Link href="/" className="text-pink-500 font-semibold hover:underline" aria-label="Login">
               Login
             </Link>
           </p>
           
           {status.message && (
-            <p 
-              className={`mt-2 text-sm text-center ${
-                status.isError ? 'text-red-500' : 'text-green-500'
-              }`}
-            >
+            <p className={`mt-2 text-sm text-center ${status.isError ? 'text-red-500' : 'text-green-500'}`}>
               {status.message}
             </p>
           )}

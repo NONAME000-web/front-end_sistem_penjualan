@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const NEXTAUTH_URL = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+const NEXTAUTH_URL = process.env.NEXTAUTH_URL || 'https://front-end-sistem-penjualan-fusx8irx5-noname000-webs-projects.vercel.app/';
 
 export async function POST(req: Request) {
   const { email, otp } = await req.json();
